@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<script src="script.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+		<meta charset="UTF-8" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+			<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+			<link rel="stylesheet" href="../css/font-awesome.min.css"/>
+			<link rel="stylesheet" href="../css/owl.carousel.min.css"/>
+			<link rel="stylesheet" href="../css/nice-select.css"/>
+			<link rel="stylesheet" href="../css/magnific-popup.css"/>
+			<link rel="stylesheet" href="../css/slicknav.min.css"/>
+			<link rel="stylesheet" href="../css/animate.css"/>
+
+			<!-- Main Stylesheets -->
+			<link rel="stylesheet" href="../css/style.css"/>
+		<title>Hospital Data</title>
+		<style>
+			* {
+			  box-sizing: border-box;
+			}
+		
+			#myInput {
+			  background-image: url('search.png');
+			  background-position: 0;
+			  background-repeat: no-repeat;
+			  width: 40%;
+			  font-size: 16px;
+			  padding: 12px 20px 12px 40px;
+			  border: 1px solid #ddd;
+			  margin: 5px;
+			  background-size: contain;
+			  text-align: center;
+			}
+		
+			#myTable {
+			  border-collapse: collapse;
+			  width: 100%;
+			  border: 1px solid #ddd;
+			  font-size: 18px;
+			}
+		
+			#myTable th, #myTable td {
+			  text-align: left;
+			  padding: 12px;
+			}
+		
+			#myTable tr {
+			  border-bottom: 1px solid #ddd;
+			}
+		
+			#myTable tr.header, #myTable tr:hover {
+			  background-color: #f1f1f1;
+			}
+			</style>
+	</head>
+	<body style="background:#f6f6f6;">
+		<div class="d-flex justify-content-center">
+			<div class="spinner-border"
+				role="status" id="loading">
+				<span class="sr-only">Loading...</span>
+			</div>
+		</div>
+		<header class="header-section" >
+
+			<div>
+				<a href="index.html" class="site-logo">
+					<img src="img/logo.png" alt="">
+				</a>
+		<div class="header-bottom">
+			<a href="index.html" class="site-logo">
+				<img src="img/logo.png" alt="">
+			</a>
+		<div class="container">
+			<ul class="main-menu">
+				<li><a href="../index.html" >Home</a></li>
+				<li><a href="../about.html">General Awareness</a></li>
+				<li><a href="..\contact_and_helpline\contact_helpline.html">Helpline</a>
+
+				</li>
+				<li><a href="..\Notifications_Advisory\advisory.html" >Notification</a>
+				</li>
+				<li><a href="" class="active">Beds </a>
+					<ul class="sub-menu">
+						<li><a href="..\hospital_dashboard\beds.html">Hospital</a></li>
+						<li><a href="..\Hospital_Dashboard2\hospitalbeds.html">Medical Colleges</a></li>
+					</ul>
+				</li>
+				<li><a href="../blog.html">Graphs</a>
+
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</header>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=David+Libre:wght@700&family=Piazzolla:wght@700&display=swap');
+
+    h2{
+      text-transform: uppercase;
+      color: #393b44;
+    font-family: 'Piazzolla', serif;
+    margin: 0 auto 30px;
+    text-align: center;
+    }
+    body{
+      text-align: center;
+    }
+    </style>
+<section class="hero-advisory">
+		<h2>Hospital Data COVID-19</h2>
+
+		<div class="image" >
+			<img src="search.png" style="float:left; margin: 0 450px; text-align:center;" alt="">
+			<!-- searchbar -->
+			<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for your loacation .." title="Type in a name" style="margin:0 470px 0 ;">
+			<script>
+			function myFunction() {
+			  var input, filter, table, tr, td, i, txtValue;
+			  input = document.getElementById("myInput");
+			  filter = input.value.toUpperCase();
+			  table = document.getElementById("Hospital");
+			  tr = table.getElementsByTagName("tr");
+			  for (i = 0; i < tr.length; i++) {
+				td = tr[i].getElementsByTagName("td")[0];
+				if (td) {
+				  txtValue = td.textContent || td.innerText;
+				  if (txtValue.toUpperCase().indexOf(filter) > -1) {
+					tr[i].style.display = "";
+				  } else {
+					tr[i].style.display = "none";
+				  }
+				}
+			  }
+			}
+			</script>
+  
+		  </div>
+
+		<table style="margin-left: 20px;width:97%;" id="Hospital" class="table table-bordered table-striped"></table>
+	</section>
+	</body>
+</html>
